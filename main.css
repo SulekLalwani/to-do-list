@@ -1,0 +1,149 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  background: rgb(36, 36, 36);
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.task {
+  margin: auto;
+  width: 95%;
+  border: 0;
+  border-radius: 5px;
+  background-color: rgb(60, 60, 60);
+  position: relative;
+  height: 4em;
+  margin-bottom: 1em;
+}
+
+.task div {
+  float: right;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1em;
+}
+
+.newTask {
+  text-align: center;
+}
+
+/* Hides scrollbar that would appear if task is too long in Chromium browsers. */
+.task p::-webkit-scrollbar {
+  display: none;
+}
+
+.task p {
+  overflow: auto;
+  scrollbar-width: none;
+  white-space: nowrap;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1em;
+  width: calc(100% - 8.5em);
+}
+
+button {
+  height: 3em;
+  width: 3em;
+  border: 0;
+  border-radius: 5px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  opacity: 0.6;
+}
+
+button i {
+  vertical-align: middle;
+}
+
+.editBtn {
+  background-color: rgb(200, 186, 60);
+}
+
+.editBtn i {
+  content: url(icons/create-outline.svg);
+  height: 100%;
+}
+
+.deleteBtn {
+  background-color: rgb(227, 54, 54);
+  margin-left: 0.5em;
+}
+
+.deleteBtn i {
+  content: url(icons/remove.svg);
+  height: 90%;
+}
+
+.addBtn {
+  background-color: rgb(87, 157, 232);
+}
+
+.addBtn i {
+  content: url(icons/add.svg);
+  height: 100%;
+}
+
+.acceptBtn {
+  background-color: rgb(55, 198, 55);
+}
+
+.acceptBtn i {
+  content: url(icons/check.svg);
+  height: 100%;
+}
+
+.cancelBtn {
+  background-color: rgb(227, 54, 54);
+  margin-left: 0.5em;
+}
+
+.cancelBtn i {
+  content: url(icons/close.svg);
+  height: 70%;
+}
+
+.taskInput {
+  height: 2.5em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  background-color: gray;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 0em 0.5em;
+  width: calc(100% - 9.5em);
+  left: 1em;
+}
+
+.taskInput:focus {
+  outline: none;
+}
+
+/* Sets placeholder text color for Chromium browsers. */
+.taskInput::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Sets placeholder text color for Firefox browsers. */
+.taskInput::-moz-placeholder {
+  color: rgba(255, 255, 255, 1);
+}
